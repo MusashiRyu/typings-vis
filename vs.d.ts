@@ -1113,21 +1113,12 @@ declare namespace __vis {
       edges?: IEdge[];
   }
 
-  export interface INode {
-      id?: string;
-      label?: string;
-      x?: number;
-      y?: number;
-      fixed?: boolean;
-      image?: string;
-      shape?: string;
-      size?: number;
+  export interface INode extends INodeOptions {
+      id: string;
   }
 
-  export interface IEdge {
-      from?: string;
-      to?: string;
-      id?: string;
+  export interface IEdge extends IEdgeOptions {
+      id: string;
   }
 
   export interface IOptions {
@@ -1205,8 +1196,6 @@ declare namespace __vis {
         size?: number,  // 50,
         color?: string,
     };
-
-    id?: string;
 
     image?: string;
 
@@ -1288,8 +1277,6 @@ declare namespace __vis {
     hidden?: boolean;
 
     hoverWidth?: number; // please note, hoverWidth could be also a function. This case is not represented here
-
-    id?: string;
 
     label?: string;
 
